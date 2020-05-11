@@ -10,36 +10,39 @@ class Directory extends Component {
         this.state = {
             sections: [
                 {
-                  title: 'hats',
-                  imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                  title: 'new zeland',
+                  imageUrl: 'https://images.pexels.com/photos/572689/pexels-photo-572689.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
                   id: 1,
-                  linkUrl: 'shop/hats'
+                  size: 'large',
+                  link: 'newzeland'
                 },
                 {
-                  title: 'jackets',
-                  imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                  title: 'finland',
+                  imageUrl: 'https://images.pexels.com/photos/3594963/pexels-photo-3594963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
                   id: 2,
-                  linkUrl: 'shop/jackets'
+                  size: 'large',
+                  link: 'finland'
                 },
                 {
-                  title: 'sneakers',
-                  imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                  title: 'iceland',
+                  imageUrl: 'https://images.pexels.com/photos/346972/pexels-photo-346972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
                   id: 3,
-                  linkUrl: 'shop/sneakers'
+                  size: 'large',
+                  link: 'iceland'
                 },
                 {
-                  title: 'womens',
-                  imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-                  size: 'large',
+                  title: 'switzerland',
+                  imageUrl: 'https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
                   id: 4,
-                  linkUrl: 'shop/womens'
+                  size: 'large',
+                  link: 'switzerland'
                 },
                 {
-                  title: 'mens',
-                  imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-                  size: 'large',
+                  title: 'norway',
+                  imageUrl: 'https://images.pexels.com/photos/1559825/pexels-photo-1559825.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
                   id: 5,
-                  linkUrl: 'shop/mens'
+                  size: 'large',
+                  link: 'norway'
                 }
             ]
         }
@@ -49,8 +52,14 @@ class Directory extends Component {
         return (
             <Fragment>
                 <div className='directory-menu'>
-                    {this.state.sections.map(({ title, imageUrl, id, size }) =>
-                        <MenuItem key={ id } title={ title } image={ imageUrl } size={ size }/>
+                    {this.state.sections.map(({ title, imageUrl, id, size, link }) =>
+                        <MenuItem
+                          key={ id } 
+                          title={ title } 
+                          image={ imageUrl } 
+                          size={ size }
+                          link={ link }
+                        />
                     )}
                 </div>
             </Fragment>
