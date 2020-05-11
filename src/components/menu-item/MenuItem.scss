@@ -1,16 +1,18 @@
 .menu-item {
-    min-width: 30%;
-    height: 240px;
-    flex: 1 1 auto;
+    min-width: 25%;
+    @media screen and (max-width: 700px) {
+      min-width: 50%;
+    }
+    height: 200px;
+    flex: 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    border-radius: 1em;
-    margin: 0 7.5px 15px;
+    margin: 20px 7.5px 15px;
+    border: none;
+    border-radius: 2em;
     background: center;
     background-size: cover;
-    border: none;
     overflow: hidden;
 
     &:hover {
@@ -27,7 +29,7 @@
     }
 
     &.large {
-      height: 420px;
+      height: 400px;
     }
 
     &:first-child {
@@ -46,7 +48,7 @@
     }
   
     .content {
-      height: 90px;
+      height: 5vh;
       padding: 0 25px;
       display: flex;
       flex-direction: column;
@@ -61,8 +63,8 @@
       .title {
         font-weight: bold;
         margin: 0 auto;
-        font-size: 22px;
-        color: #4a4a4a;
+        font-size: 20px;
+        color: #011627;
         font-family: 'Karla', sans-serif;
       }
     }

@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom'
 
+import './App.css'
 import HomePage from './pages/home-page/HomePage'
-import Countries from './components/countries-component/Countries'
+import ExplorePage from './pages/explore-page/ExplorePage'
 // Switch only render one route at once
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
     <Fragment>
       <Switch>
         <Route exact path='/' component={ HomePage }/>
-        <Route path='/newzeland' component= { Countries } />
+        <Route path='/explore' component= { ExplorePage } />
       </Switch>
     </Fragment>
   );
