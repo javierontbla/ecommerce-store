@@ -6,7 +6,6 @@ import NavBar from '../../components/navbar-component/NavBar'
 
 const HomePage = () => (
     <Fragment>
-        <NavBar />
         <div className='home-page'>
             <Directory />
         </div>
