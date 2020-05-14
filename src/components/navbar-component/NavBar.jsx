@@ -1,18 +1,24 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
-import './NavBar.scss'
+import './NavBar.css'
+import giraffe from '../icons/giraffe.svg'
 
-const NavBar = () => (
+const NavBar = ({ history, match }) => (
   <Fragment>
-    <div className='nav-bar'>
-      <Link to='/'><img className='logo' src={'https://image.flaticon.com/icons/svg/2290/2290410.svg'}/></Link>
-      <div className='btns'>
-        <Link className='link' to='/explore'>EXPLORE</Link>
-        <Link className='link' to='/signin'>SIGN IN</Link>
-      </div>
-    </div>
+    <nav>
+      <input type='checkbox' id='check'/>
+      <label htmlFor='check' className='icon'>
+        <i className='fas fa-bars'></i>
+      </label>
+      <label className='logo' onClick={() => history.push('/')}><img className='home-logo' src={giraffe}/></label>
+      <ul>
+        <li className='option'><a onClick={() => history.push('/')}>home</a></li>
+        <li className='option'><a onClick={() => history.push(`${match.url}explore`)}>explore</a></li>
+        <li className='option'><a onClick={() => history.push(`${match.url}signin`)}>sign in</a></li>
+      </ul>
+    </nav>
   </Fragment>
 )   
 
-export default NavBar
+export default withRouter(NavBar)

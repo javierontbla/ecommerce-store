@@ -1,5 +1,6 @@
 body {
   opacity: 1.1;
+  margin: 0;
 }
 
 .home-page {
@@ -8,3 +9,25 @@ body {
     align-items: center;
   }
 
+  .home-img {
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url('https://pixabay.com/get/54e1d24b4954aa14f6da8c7dda35367b1d36dae45053774d_1280.jpg');
+    background-size: cover;
+    height: 110vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    text-decoration: underline;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  @media (max-width: 858px) {
+    .home-img {
+      font-size: 40px;
+    }
+  }

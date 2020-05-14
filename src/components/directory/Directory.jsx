@@ -10,36 +10,36 @@ class Directory extends Component {
         this.state = {
             sections: [
                 {
-                  title: 'new zeland',
-                  imageUrl: 'https://images.pexels.com/photos/572689/pexels-photo-572689.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+                  title: 'beale collection',
+                  imageUrl: 'https://pixabay.com/get/57e2d54a4e5ba514f6da8c7dda35367b1d36dae752507849_1280.jpg',
                   id: 1,
                   size: 'large',
                   link: 'explore'
                 },
                 {
-                  title: 'finland',
-                  imageUrl: 'https://images.pexels.com/photos/3594963/pexels-photo-3594963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                  title: 'kalahari collection',
+                  imageUrl: 'https://pixabay.com/get/54e5d2404855ab14f6da8c7dda35367b1d36dae752517740_1280.jpg',
                   id: 2,
                   size: 'large',
                   link: 'explore'
                 },
                 {
-                  title: 'iceland',
-                  imageUrl: 'https://images.pexels.com/photos/346972/pexels-photo-346972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                  title: 'denali collection',
+                  imageUrl: 'https://pixabay.com/get/54e5d3434a50aa14f6da8c7dda35367b1d36dae75359744f_1280.jpg',
                   id: 3,
                   size: 'large',
                   link: 'explore'
                 },
                 {
-                  title: 'switzerland',
-                  imageUrl: 'https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                  title: 'stroomi rand collection',
+                  imageUrl: 'https://pixabay.com/get/54e7d4454d55ae14f6da8c7dda35367b1d36dae753577949_1280.jpg',
                   id: 4,
                   size: 'large',
                   link: 'explore'
                 },
                 {
-                  title: 'norway',
-                  imageUrl: 'https://images.pexels.com/photos/1559825/pexels-photo-1559825.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                  title: 'bondi beach collection',
+                  imageUrl: 'https://pixabay.com/get/57e7d2464a51a914f6da8c7dda35367b1d36dae75350784e_1280.jpg',
                   id: 5,
                   size: 'large',
                   link: 'explore'

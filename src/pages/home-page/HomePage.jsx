@@ -6,6 +6,9 @@ import NavBar from '../../components/navbar-component/NavBar'
 
 const HomePage = () => (
     <Fragment>
+        <div className='home-img'>
+            SUMMER COLLECTION
+        </div>
         <div className='home-page'>
             <Directory />
         </div>

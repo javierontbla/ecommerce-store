@@ -1,32 +1,32 @@
 const Data = [
     {
       id: 1,
-      title: 'Hats',
+      title: 'Kalahari Collection',
       routeName: 'hats',
       items: [
         {
           id: 1,
           name: 'Brown Brim',
-          imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
-          price: 25
+          imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+          price: 250
         },
         {
           id: 2,
-          name: 'Blue Beanie',
-          imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
-          price: 18
+          name: 'Bosh J',
+          imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
+          price: 180
         },
         {
           id: 3,
-          name: 'Brown Cowboy',
-          imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
-          price: 35
+          name: 'V Jacket',
+          imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
+          price: 250
         },
         {
           id: 4,
           name: 'Grey Brim',
           imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
-          price: 25
+          price: 90
         },
         {
           id: 5,
@@ -62,31 +62,31 @@ const Data = [
     },
     {
       id: 2,
-      title: 'Sneakers',
+      title: 'Beale Collection',
       routeName: 'sneakers',
       items: [
         {
           id: 10,
-          name: 'Adidas NMD',
-          imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
+          name: 'EV Hoodie',
+          imageUrl: 'https://images.unsplash.com/photo-1484249157003-9ef495e190c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
           price: 220
         },
         {
           id: 11,
-          name: 'Adidas Yeezy',
-          imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
+          name: 'Blue Jacket',
+          imageUrl: 'https://images.unsplash.com/photo-1557700836-25f2464e845d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80',
           price: 280
         },
         {
           id: 12,
-          name: 'Black Converse',
-          imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
+          name: 'GT T-Shirt',
+          imageUrl: 'https://images.unsplash.com/photo-1562208512-ec508326186b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
           price: 110
         },
         {
           id: 13,
-          name: 'Nike White AirForce',
-          imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
+          name: 'Navy Jacket',
+          imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
           price: 160
         },
         {
@@ -117,19 +117,19 @@ const Data = [
     },
     {
       id: 3,
-      title: 'Jackets',
+      title: 'Denali Collection',
       routeName: 'jackets',
       items: [
         {
           id: 18,
-          name: 'Black Jean Shearling',
-          imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
+          name: 'Beige T-Shirt',
+          imageUrl: 'https://images.unsplash.com/photo-1504660697883-bdc3196e0c99?ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80',
           price: 125
         },
         {
           id: 19,
-          name: 'Blue Jean Jacket',
-          imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
+          name: 'Blue Sweater',
+          imageUrl: 'https://images.unsplash.com/photo-1498163641090-1df07c039069?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
           price: 90
         },
         {
@@ -140,8 +140,8 @@ const Data = [
         },
         {
           id: 21,
-          name: 'Brown Shearling',
-          imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
+          name: 'Blue Beanie',
+          imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
           price: 165
         },
         {
@@ -154,7 +154,7 @@ const Data = [
     },
     {
       id: 4,
-      title: 'Womens',
+      title: 'Stroomi Rand Collection',
       routeName: 'womens',
       items: [
         {
@@ -171,14 +171,14 @@ const Data = [
         },
         {
           id: 25,
-          name: 'Floral Dress',
-          imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
+          name: 'Peiki Hat',
+          imageUrl: 'https://pixabay.com/get/5ee2d4464a54b108f5d08460da2932761c3bdce6555276_1280.jpg',
           price: 80
         },
         {
           id: 26,
-          name: 'Red Dots Dress',
-          imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
+          name: 'White T-Shirt',
+          imageUrl: 'https://images.unsplash.com/photo-1485145782098-4f5fd605a66b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
           price: 80
         },
         {
@@ -203,31 +203,31 @@ const Data = [
     },
     {
       id: 5,
-      title: 'Mens',
+      title: 'Bondi Beach Collection',
       routeName: 'mens',
       items: [
         {
           id: 30,
-          name: 'Camo Down Vest',
-          imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+          name: 'Floral Dress',
+          imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
           price: 325
         },
         {
           id: 31,
-          name: 'Floral T-shirt',
-          imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+          name: 'Black H T-Shirt',
+          imageUrl: 'https://images.unsplash.com/photo-1503342394128-c104d54dba01?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
           price: 20
         },
         {
           id: 32,
-          name: 'Black & White Longsleeve',
-          imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+          name: 'Grey Longsleeve',
+          imageUrl: 'https://images.unsplash.com/photo-1489007360682-2544382e1e73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
           price: 25
         },
         {
           id: 33,
-          name: 'Pink T-shirt',
-          imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+          name: 'Dooots Dress',
+          imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
           price: 25
         },
         {

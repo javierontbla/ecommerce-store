@@ -1,5 +1,6 @@
 .menu-item {
-    min-width: 25%;
+    min-width: 45%;
+    max-width: 100%;
     @media screen and (max-width: 700px) {
       min-width: 100%;
     }
@@ -8,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 7.5px 15px;
+    margin: 0px 7.5px 15px;
     border: none;
     border-radius: 0.2em;
     background: center;
