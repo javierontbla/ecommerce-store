@@ -11,7 +11,7 @@ const NavBar = ({ history, match }) => (
       <label htmlFor='check' className='icon'>
         <i className='fas fa-bars'></i>
       </label>
-      <label className='logo' onClick={() => history.push('/')}><img className='home-logo' src={giraffe}/></label>
+      <label className='logo' onClick={() => history.push('/')}><img className='home-logo' alt='logo' src={giraffe}/></label>
       <ul>
         <li className='option'><a onClick={() => history.push('/')}>home</a></li>
         <li className='option'><a onClick={() => history.push(`${match.url}explore`)}>explore</a></li>

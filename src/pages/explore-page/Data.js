@@ -171,8 +171,8 @@ const Data = [
         },
         {
           id: 25,
-          name: 'Peiki Hat',
-          imageUrl: 'https://pixabay.com/get/5ee2d4464a54b108f5d08460da2932761c3bdce6555276_1280.jpg',
+          name: 'ShoulderLess',
+          imageUrl: 'https://images.unsplash.com/photo-1465145782865-09532f760e6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
           price: 80
         },
         {

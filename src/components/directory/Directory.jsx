@@ -10,36 +10,36 @@ class Directory extends Component {
         this.state = {
             sections: [
                 {
-                  title: 'beale collection',
-                  imageUrl: 'https://pixabay.com/get/57e2d54a4e5ba514f6da8c7dda35367b1d36dae752507849_1280.jpg',
+                  title: 'bondi beach collection',
+                  imageUrl: 'https://images.unsplash.com/photo-1525672892528-eb2eead4effc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
                   id: 1,
                   size: 'large',
                   link: 'explore'
                 },
                 {
                   title: 'kalahari collection',
-                  imageUrl: 'https://pixabay.com/get/54e5d2404855ab14f6da8c7dda35367b1d36dae752517740_1280.jpg',
+                  imageUrl: 'https://images.unsplash.com/photo-1542059765-24f1c00c1349?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80',
                   id: 2,
                   size: 'large',
                   link: 'explore'
                 },
                 {
                   title: 'denali collection',
-                  imageUrl: 'https://pixabay.com/get/54e5d3434a50aa14f6da8c7dda35367b1d36dae75359744f_1280.jpg',
+                  imageUrl: 'https://images.unsplash.com/photo-1484328861630-cf73b7d34ea3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80',
                   id: 3,
                   size: 'large',
                   link: 'explore'
                 },
                 {
                   title: 'stroomi rand collection',
-                  imageUrl: 'https://pixabay.com/get/54e7d4454d55ae14f6da8c7dda35367b1d36dae753577949_1280.jpg',
+                  imageUrl: 'https://images.unsplash.com/photo-1482555670981-4de159d8553b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
                   id: 4,
                   size: 'large',
                   link: 'explore'
                 },
                 {
-                  title: 'bondi beach collection',
-                  imageUrl: 'https://pixabay.com/get/57e7d2464a51a914f6da8c7dda35367b1d36dae75350784e_1280.jpg',
+                  title: 'beale collection',
+                  imageUrl: 'https://images.unsplash.com/photo-1549288311-88389ee53b93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1017&q=80',
                   id: 5,
                   size: 'large',
                   link: 'explore'
