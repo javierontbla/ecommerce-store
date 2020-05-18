@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import './CustomBtn.scss'
+import "./CustomBtn.scss";
 
-const CustomBtn = ({ value, type }) => (
-    <button className='btn' type={type}>
-        { value }
-    </button>
-)
+const CustomBtn = ({ value, type, googleBtn }) => (
+  <button className={`${googleBtn ? "googleBtn" : ""} btn`} type={type}>
+    {value}
+  </button>
+);
 
-export default CustomBtn
+export default CustomBtn;
