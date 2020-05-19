@@ -22,6 +22,7 @@ class SignIn extends Component {
   };
 
   handleInput = (e) => {
+    console.log(e.target);
     const { value, name } = e.target;
     this.setState({ [name]: value });
   };
