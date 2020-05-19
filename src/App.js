@@ -6,7 +6,7 @@ import HomePage from "./pages/home-page/HomePage";
 import ExplorePage from "./pages/explore-page/ExplorePage";
 import NavBar from "./components/navbar-component/NavBar";
 import SignIn from "./pages/sign-in-page/SignIn";
-import { auth } from "./Firebase/Firebase";
+import { auth, createUserProfileDoc } from "./Firebase/Firebase";
 
 class App extends Component {
   constructor() {
@@ -19,9 +19,25 @@ class App extends Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
-      this.setState({ currentUser: user });
-      console.log(user);
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
+      // if user exists
+      if (user) {
+        const userRef = await createUserProfileDoc(user);
+
+        userRef.onSnapshot((snapShot) => {
+          const { email, displayName } = snapShot.data();
+          this.setState(
+            {
+              currentUser: {
+                id: snapShot.id,
+                name: displayName,
+                email: email,
+              },
+            },
+            () => console.log(this.state)
+          );
+        });
+      }
     });
   }
 
