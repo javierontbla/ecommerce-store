@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
 
 import "./NavBar.css";
 import giraffe from "../icons/giraffe.svg";
@@ -36,4 +37,8 @@ const NavBar = ({ history, match, currentUser }) => (
   </Fragment>
 );
 
-export default withRouter(NavBar);
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default withRouter(NavBar, connect(mapStateToProps));
