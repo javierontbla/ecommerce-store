@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
 import "./App.css";
 import HomePage from "./pages/home-page/HomePage";
@@ -7,18 +8,13 @@ import ExplorePage from "./pages/explore-page/ExplorePage";
 import NavBar from "./components/navbar-component/NavBar";
 import SignIn from "./pages/sign-in-page/SignIn";
 import { auth, createUserProfileDoc } from "./Firebase/Firebase";
+import { userAction } from "./redux/user-actions";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      currentUser: null,
-    };
-  }
-
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+    const { userAction } = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
       // if user exists
       if (user) {
@@ -26,18 +22,13 @@ class App extends Component {
 
         userRef.onSnapshot((snapShot) => {
           const { email, displayName } = snapShot.data();
-          this.setState(
-            {
-              currentUser: {
-                id: snapShot.id,
-                name: displayName,
-                email: email,
-              },
-            },
-            () => console.log(this.state)
-          );
+          userAction({
+            id: snapShot.id,
+            name: displayName,
+            email: email,
+          });
         });
-      }
+      } else userAction(null);
     });
   }
 
@@ -48,16 +39,30 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <NavBar currentUser={this.state.currentUser} />
+        <NavBar />
         {/*Switch only render one route at once*/}
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/explore" component={ExplorePage} />
-          <Route exact path="/signin" component={SignIn} />
+          <Route path="/explore" component={ExplorePage} />
+          <Route
+            exact
+            path="/signin"
+            render={() =>
+              this.props.currentUser ? <Redirect to="/" /> : <SignIn />
+            }
+          />
         </Switch>
       </Fragment>
     );
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  userAction: (user) => dispatch(userAction(user)),
+});
+
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

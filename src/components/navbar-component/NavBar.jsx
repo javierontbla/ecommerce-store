@@ -1,36 +1,40 @@
 import React, { Fragment } from "react";
-import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import "./NavBar.css";
 import giraffe from "../icons/giraffe.svg";
 import { auth } from "../../Firebase/Firebase";
 
-const NavBar = ({ history, match, currentUser }) => (
+const NavBar = ({ currentUser }) => (
   <Fragment>
     <nav>
       <input type="checkbox" id="check" />
       <label htmlFor="check" className="icon">
         <i className="fas fa-bars"></i>
       </label>
-      <label className="logo" onClick={() => history.push("/")}>
+      <label className="logo">
         <img className="home-logo" alt="logo" src={giraffe} />
       </label>
       <ul>
-        <li className="option">
-          <a onClick={() => history.push("/")}>home</a>
-        </li>
-        <li className="option">
-          <a onClick={() => history.push(`${match.url}explore`)}>explore</a>
-        </li>
+        <Link to="/" className="option">
+          home
+        </Link>
+        <Link to="/explore" className="option">
+          explore
+        </Link>
         {currentUser ? (
-          <li className="option">
-            <a onClick={() => auth.signOut()}>sign out</a>
-          </li>
+          <a
+            href="#signout-btn"
+            className="option"
+            onClick={() => auth.signOut()}
+          >
+            sign out
+          </a>
         ) : (
-          <li className="option">
-            <a onClick={() => history.push(`${match.url}signin`)}>sign in</a>
-          </li>
+          <Link to="/signin" className="option">
+            sign in
+          </Link>
         )}
       </ul>
     </nav>
@@ -41,4 +45,4 @@ const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
 });
 
-export default withRouter(NavBar, connect(mapStateToProps));
+export default connect(mapStateToProps)(NavBar);
