@@ -5,8 +5,10 @@ import { connect } from "react-redux";
 import "./NavBar.css";
 import giraffe from "../icons/giraffe.svg";
 import { auth } from "../../Firebase/Firebase";
+import CartIcon from "../cart-component/CartIcon";
+import CartDropdown from "../cart-dropdown/CartDropdown";
 
-const NavBar = ({ currentUser }) => (
+const NavBar = ({ currentUser, cart }) => (
   <Fragment>
     <nav>
       <input type="checkbox" id="check" />
@@ -36,13 +38,18 @@ const NavBar = ({ currentUser }) => (
             sign in
           </Link>
         )}
+        <li>
+          <CartIcon />
+        </li>
       </ul>
+      {cart ? null : <CartDropdown />}
     </nav>
   </Fragment>
 );
 
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
+  cart: state.cart.hidden,
 });
 
 export default connect(mapStateToProps)(NavBar);
