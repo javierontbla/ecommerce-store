@@ -1,12 +1,14 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import "./NavBar.css";
 import giraffe from "../icons/giraffe.svg";
 import { auth } from "../../Firebase/Firebase";
 import CartIcon from "../cart-component/CartIcon";
 import CartDropdown from "../cart-dropdown/CartDropdown";
+import { selectCartHidden, selectActiveUser } from "../../redux/selectors";
 
 const NavBar = ({ currentUser, cart }) => (
   <Fragment>
@@ -47,9 +49,10 @@ const NavBar = ({ currentUser, cart }) => (
   </Fragment>
 );
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
-  cart: state.cart.hidden,
+// creteStructuredSelector pass the STATE automatically
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectActiveUser,
+  cart: selectCartHidden,
 });
 
 export default connect(mapStateToProps)(NavBar);
