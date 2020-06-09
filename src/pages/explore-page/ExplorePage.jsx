@@ -1,31 +1,18 @@
-import React, { Component, Fragment } from 'react'
+import React from "react";
+import { Route } from "react-router-dom";
 
-import Data from './Data'
-import './ExplorePage.scss'
-import PreviewExplore from '../../components/preview-explore/PreviewExplore'
+import "./ExplorePage.scss";
+import CollectionPreview from "../../components/collection-preview-component/CollectionPreview";
+import CollectionPage from "../../pages/collection-page/CollectionPage";
 
-class ExplorePage extends Component {
-    constructor() {
-        super()
-        this.state = {
-            collections: Data
-        }
-    }
+// props from routing the shop component on App.js
+const ExplorePage = ({ match }) => (
+  <>
+    <div className="shop-page">
+      <Route exact path={`${match.path}`} component={CollectionPreview} />
+      <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
+    </div>
+  </>
+);
 
-    render () {
-        const { collections } = this.state
-        return (
-            <Fragment>
-                <div>
-                    { 
-                        collections.map(({ id, ...allData }) => (
-                            <PreviewExplore key={ id } { ...allData } />
-                        ))
-                    }
-                </div>
-            </Fragment>
-        )
-    }
-}
-
-export default ExplorePage
+export default ExplorePage;
